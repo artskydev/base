@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    Header Set Access-Control-Allow-Origin "http://m-trashmart.com"
+	RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^((?s).*)$ index.php?_url=/$1 [QSA,L]
+</IfModule>
